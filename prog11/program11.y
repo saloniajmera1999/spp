@@ -11,10 +11,8 @@ start: expr NEWLINE { printf("Accepted");
                       exit(1);}
 	;
 
-expr:  A X B          
-  ;
-X: A X B
-   |A B
+expr:  A expr B B          
+     |A B B
   ;
   
 %%
